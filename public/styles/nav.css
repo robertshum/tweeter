@@ -1,0 +1,34 @@
+.navigation {
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+
+  /* flex */
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  position: fixed;
+}
+
+nav span {
+  font-family: 'Bungee', sans-serif;
+}
+
+.title {
+  color: #FFFFFF;
+  margin: 0 1.5em;
+}
+
+.title-side-container {
+  display: flex;
+  margin: 0 1.5em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-side {
+  font-size: 20px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 300;
+  color: #FFFFFF;
+}
