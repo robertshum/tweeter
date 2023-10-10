@@ -1,3 +1,45 @@
-.new-tweet {
-  /* insert css here */
+.new-tweet>h2 {
+  margin: 15px 0;
+}
+
+.tweet-form {
+  height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* the input text box */
+.tweet-field {
+  border: none;
+  /* Remove the default border */
+  border-bottom: 2px solid #000;
+  /* Add a bottom border (2px solid line) */
+  /* Optional: Add padding to adjust spacing 
+  between text and border */
+  padding: 5px;
+  background-color: inherit;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 0.5;
+}
+
+.tweet-submission-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tweet-button {
+  font-family: 'Bungee', sans-serif;
+  color: #FFFFFF;
+  background-color: #4056A1;
+  padding: 5px;
+}
+
+.tweet-counter {
+  font-family: 'Bungee', sans-serif;
+  color: black;
+  padding: 5px;
 }
