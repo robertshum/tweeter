@@ -45,3 +45,11 @@
   color: black;
   padding: 5px;
 }
+
+.counter-positive {
+  color: black;
+}
+
+.counter-negative {
+  color: red;
+}
