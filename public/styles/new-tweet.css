@@ -20,9 +20,13 @@
   between text and border */
   padding: 5px;
   background-color: inherit;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1;
+
+  /* hide scrollbars */
+  overflow: hidden;
+  resize: none;
 }
 
 .tweet-submission-container {

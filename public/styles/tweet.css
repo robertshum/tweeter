@@ -1,0 +1,93 @@
+article.tweet {
+  border: 3px solid black;
+  height: 200px;
+  margin: 10px 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tweet Field Text */
+article.tweet>.tweet-field {
+  margin: 10px 10px;
+}
+
+/* 
+  Header Attributes 
+*/
+
+/* holds picture/name/handle */
+.avatar-handle-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* handle */
+.avatar-handle-container p {
+  margin: 10px 10px;
+  padding: 0;
+  font-size: 25px;
+  color: cadetblue;
+}
+
+/* holds picture and name */
+.avatar-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 10px
+}
+
+/* picture */
+.avatar-container i {
+  margin: 5px;
+  padding: 0;
+  font-size: 35px;
+}
+
+/* name */
+.avatar-container h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+}
+
+/* hover for the tweet box */
+.tweet:hover {
+  box-shadow: 6px 6px 4px #4057a17f;
+}
+
+/* 
+  Footer Attributes 
+*/
+
+/* days posted, icons */
+.days-posted-icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 10px;
+}
+
+/* days ago posted */
+.days-posted-icons-container p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+}
+
+/* Hover for footer icons*/
+.fa-solid.fa-flag:hover,
+.fa-solid.fa-retweet:hover,
+.fa-solid.fa-heart:hover {
+  color: red;
+}
