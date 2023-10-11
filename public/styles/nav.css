@@ -49,3 +49,44 @@ nav span {
 #scrollToggle:hover {
   color: #FFFFFF;
 }
+
+/* 
+  Go to Top Round Arrow
+*/
+#scrollToTop {
+  /* display: none; */
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  /* Make the element round */
+  border-radius: 50%;
+
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+
+  /* Change cursor on hover for interactivity */
+  cursor: pointer;
+
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 60px;
+
+  text-shadow: 2px 2px 0px rgb(0, 110, 253);
+
+  /* Position the button fixed to the viewport */
+  position: fixed;
+
+  /* Distance from the bottom of the viewport */
+  bottom: 10px;
+
+  /* Distance from the right of the viewport */
+  right: 10px;
+
+}
+
+#scrollToTop:hover {
+  background-color: #ffdd00;
+  /* Background color for the button */
+}
