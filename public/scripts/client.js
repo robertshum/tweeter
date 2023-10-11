@@ -75,19 +75,29 @@ $(document).ready(function() {
     // Looks at all the 'name' attributes in event.target (or a form in our case), and then collects the values of them.  It then encodes it and returns a obj.
     const formData = $(event.target).serialize();
 
+    //Fid the errormsg element, just in case we need to throw a msg
+    const $errorMsg = $(event.target).siblings("errormsg");
+
+    let word = "before";
+    //slide the error msg back up
+    $($errorMsg).slideUp(400, function() {
+      // Animation complete.
+    });
+
     // Check if specific input fields are empty by...
     //...filter out the "text=" (key)
     //...check if the (value) is empty
     const value = formData.slice(5);
     if (value === "") {
-      displayMsg("The tweet is empty.");
+
+      displayMsg("😓 The tweet is empty.", $errorMsg);
       return;
     }
 
     //if it's over 140 characters, give them a stern but friendly warning.
     //TODO more magic numbers.
     if (value.length > 140) {
-      displayMsg("The tweet is too long");
+      displayMsg("📏 The tweet is too long.", $errorMsg);
       return;
     }
 
@@ -128,9 +138,12 @@ $(document).ready(function() {
       });
   };
 
-  //TODO alert for now
-  const displayMsg = function(msg) {
-    alert(msg);
+  //display our super cool rad error message.
+  const displayMsg = function(msg, $errorMsg) {
+    $errorMsg.text(msg);
+    $errorMsg.slideDown(400, function() {
+      // Animation complete.
+    });
   };
 
   //test, remove when done

@@ -2,6 +2,15 @@
   margin: 15px 0;
 }
 
+.new-tweet>errormsg {
+  font-size: 25px;
+  color: white;
+  background-color: crimson;
+  line-height: 50px;
+  display: none;
+  padding: 5px;
+}
+
 .tweet-form {
   height: 200px;
 
