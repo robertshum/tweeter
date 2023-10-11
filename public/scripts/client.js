@@ -60,9 +60,7 @@ $(document).ready(function() {
     for (const tweetObj of tweetArray) {
       const $tweet = createTweetElement(tweetObj);
 
-
-
-      //TODO check for new tweets that should show top of container.
+      //Load new tweets
       $('#tweets-container').append($tweet);
     }
   };
