@@ -97,11 +97,22 @@ $(document).ready(function() {
     console.log("event.target", event.target);
     const formData = $(event.target).serialize();
 
-    //ajax post request that doesn't refreshthe page
-    $.post("/tweets", formData, function(_response) {
-      //TODO we can do something fun with the _response for success messages!
-
-    });
+    //ajax post request that doesn't refresh the page
+    $.post("/tweets", formData)
+      .done(function(response) {
+        // Handle a successful response
+        console.log("Success:", response);
+        // You can access response.error or other properties here
+      })
+      //TODO handle better
+      .fail(function(jqXHR, textStatus, errorThrown) {
+        // Handle the request failure
+        console.error("Request failed:", textStatus, errorThrown);
+        // You can access jqXHR.responseJSON for the error message if it's available
+        if (jqXHR.responseJSON && jqXHR.responseJSON.error) {
+          console.error("Server Error:", jqXHR.responseJSON.error);
+        }
+      });
   });
 
   renderTweets(data);
