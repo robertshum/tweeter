@@ -1,3 +1,6 @@
+/* 
+  Navigation Bar
+*/
 .navigation {
   height: 120px;
   width: 100vw;
@@ -5,7 +8,7 @@
 
   /* flex */
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
 }
@@ -14,11 +17,13 @@ nav span {
   font-family: 'Bungee', sans-serif;
 }
 
+/* Tweeter title */
 .title {
   color: #FFFFFF;
   margin: 0 1.5em;
 }
 
+/* Right hand side navigtation container */
 .title-side-container {
   display: flex;
   margin: 0 1.5em;
@@ -26,9 +31,21 @@ nav span {
   align-items: center;
 }
 
+/* Text for arrow */
 .title-side {
   font-size: 20px;
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 300;
+  color: #FFFFFF;
+}
+
+/* 
+  Scroll Toggle Arrow
+*/
+#scrollToggle {
+  color: #e10909;
+}
+
+#scrollToggle:hover {
   color: #FFFFFF;
 }
