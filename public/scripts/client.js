@@ -51,11 +51,16 @@ $(document).ready(function() {
   // Render tweets on the DOM
   const renderTweets = function(tweetArray) {
 
+    // Clear all child elements
+    $('#tweets-container').empty();
+
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
     for (const tweetObj of tweetArray) {
       const $tweet = createTweetElement(tweetObj);
+
+
 
       //TODO check for new tweets that should show top of container.
       $('#tweets-container').append($tweet);
