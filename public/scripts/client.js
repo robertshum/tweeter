@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
   /*
  * Client-side JS logic goes here
@@ -5,36 +6,11 @@ $(document).ready(function() {
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-  //Sample Tweet:
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
-
-
   // Create a new tweet in the DOM
   const createTweetElement = function(tweet) {
+
+    // Use timeago library
+    const timeStamp = timeago.format(tweet.created_at, 'en_US');
 
     //creates html element(s) with jQuery.  Populates the data from a tweet.
     const $tweet = $(`
@@ -57,7 +33,7 @@ $(document).ready(function() {
         <footer>
           <!-- day and icons go here -->
           <div class="days-posted-icons-container">
-            <p>${tweet.created_at}</p>
+            <p>${timeStamp}</p>
             <div>
               <i class="fa-solid fa-flag"></i>
               <i class="fa-solid fa-retweet"></i>
