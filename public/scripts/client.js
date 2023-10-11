@@ -70,15 +70,37 @@ $(document).ready(function() {
 
     // Serialize the form data:
     // Looks at all the 'name' attributes in event.target (or a form in our case), and then collects the values of them.  It then encodes it and returns a obj.
-    console.log("event.target", event.target);
     const formData = $(event.target).serialize();
+
+    // Check if specific input fields are empty by...
+    //...filter out the "text=" (key)
+    //...check if the (value) is empty
+    const value = formData.slice(5);
+    if (value === "") {
+      displayMsg("The tweet is empty.");
+      return;
+    }
+
+    //if it's over 140 characters, give them a stern but friendly warning.
+    //TODO more magic numbers.
+    if (value.length > 140) {
+      displayMsg("The tweet is too long");
+      return;
+    }
 
     //ajax post request that doesn't refresh the page
     $.post("/tweets", formData)
       .done(function(response) {
         // Handle a successful response
         console.log("Success:", response);
-        // You can access response.error or other properties here
+
+        //Load the new results
+        loadTweets();
+
+        //TODO move to helper method to clear the results
+        //probably reset the css, and the number to counter to 140.
+        const textField = $(event.target).find('#tweet-text');
+        textField.val("");
       })
       //TODO handle better
       .fail(function(jqXHR, textStatus, errorThrown) {
@@ -101,6 +123,11 @@ $(document).ready(function() {
         //...looks like jQuery converts json into obj.
         renderTweets(responseData);
       });
+  };
+
+  //TODO alert for now
+  const displayMsg = function(msg) {
+    alert(msg);
   };
 
   //test, remove when done
