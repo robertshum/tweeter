@@ -115,7 +115,19 @@ $(document).ready(function() {
       });
   });
 
-  renderTweets(data);
+  //get tweets from our 'db'
+  const loadTweets = function() {
+    //use jquery to make a request to /tweets and get array of tweets as JSON
+    $.get('/tweets')
+      .then(function(responseData) {
 
+        //display the tweets from the GET call
+        //...looks like jQuery converts json into obj.
+        renderTweets(responseData);
+      });
+  };
+
+  //test, remove when done
+  loadTweets();
 
 });
