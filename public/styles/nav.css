@@ -2,7 +2,7 @@
   Navigation Bar
 */
 .navigation {
-  height: 120px;
+  height: 100px;
   width: 100vw;
   background-color: #4056A1;
 
@@ -10,6 +10,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+
+  /* Toggle on and off */
+  visibility: visible;
+
+  /* With these two powers combined, we get captain planet.
+  ...or it just pins the element to the top */
+  top: 0;
   position: fixed;
 }
 
@@ -21,6 +29,14 @@ nav span {
 .title {
   color: #FFFFFF;
   margin: 0 1.5em;
+
+  /* ALWAYS SHOW Regardless of layout */
+
+  /* Show the child elements */
+  visibility: visible;
+
+  /* Make sure child elements are fully visible */
+  opacity: 1;
 }
 
 /* Right hand side navigtation container */
@@ -29,6 +45,14 @@ nav span {
   margin: 0 1.5em;
   flex-direction: column;
   align-items: center;
+
+  /* ALWAYS SHOW Regardless of layout */
+
+  /* Show the child elements */
+  visibility: visible;
+
+  /* Make sure child elements are fully visible */
+  opacity: 1;
 }
 
 /* Text for arrow */

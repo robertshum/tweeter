@@ -1,11 +1,9 @@
 .header-items {
-  width: 100%;
-  height: 500px;
 
   /* flex */
   display: flex;
-  flex-direction:column;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content:space-around;
   align-items: center;
 
   /* bg texture */
@@ -15,11 +13,12 @@
 }
 
 .header-items .avatar {
-  margin: 0;
+  margin: 7x;
+  max-height: 50%;
 }
 
-.header-items .name h2{
+.header-items .name h2 {
   color: #FFFFFF;
-  margin: 0;
-  margin-bottom: 1em;
+  margin: 7px;
+  max-height: 25%;
 }
