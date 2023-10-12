@@ -1,13 +1,17 @@
+@import 'variables';
+
 .header-items {
+
   /* flex */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+
   /* bg texture */
-  background-image: url("../images/header-bg.png");
+  background-image: url('../images/header-bg.png');
   background-repeat: repeat;
-  background-color: #000000;
+  background-color: $header-background-color;
 }
 
 .header-items .avatar {
@@ -16,7 +20,7 @@
 }
 
 .header-items .name h2 {
-  color: #ffffff;
+  color: $profile-name-color;
   margin: 7px;
   max-height: 25%;
 }

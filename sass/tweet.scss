@@ -2,18 +2,20 @@ article.tweet {
   border: 3px solid black;
   height: 200px;
   margin: 25px 0;
+
   display: flex;
   flex-direction: column;
 }
 
 /* Tweet Field Text */
-article.tweet > .tweet-field {
+article.tweet>.tweet-field {
   margin: 10px 10px;
 }
 
 /* 
   Header Attributes 
 */
+
 /* holds picture/name/handle */
 .avatar-handle-container {
   display: flex;
@@ -35,7 +37,7 @@ article.tweet > .tweet-field {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 10px 10px;
+  margin: 10px 10px
 }
 
 /* "picture" (from awesomeFonts) */
@@ -62,18 +64,20 @@ article.tweet > .tweet-field {
 
 /* hover for the tweet box */
 .tweet:hover {
-  box-shadow: 6px 6px 4px rgba(64, 87, 161, 0.4980392157);
+  box-shadow: 6px 6px 4px #4057a17f;
 }
 
 /* 
   Footer Attributes 
 */
+
 /* days posted, icons */
 .days-posted-icons-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
   margin: 10px;
 }
 

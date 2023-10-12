@@ -1,16 +1,22 @@
+@import 'variables';
+
 /* 
   Navigation Bar
 */
 .navigation {
   height: 100px;
   width: 100vw;
-  background-color: #4056A1;
+  background-color: $navigation-background-color;
+
   /* flex */
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+
   /* Toggle on and off */
   visibility: visible;
+
   /* With these two powers combined, we get captain planet.
   ...or it just pins the element to the top */
   top: 0;
@@ -18,16 +24,19 @@
 }
 
 nav span {
-  font-family: "Bungee", sans-serif;
+  font-family: 'Bungee', sans-serif;
 }
 
 /* Tweeter title */
 .title {
-  color: #FFFFFF;
+  color: $title-color;
   margin: 0 1.5em;
+
   /* ALWAYS SHOW Regardless of layout */
+
   /* Show the child elements */
   visibility: visible;
+
   /* Make sure child elements are fully visible */
   opacity: 1;
 }
@@ -38,9 +47,12 @@ nav span {
   margin: 0 1.5em;
   flex-direction: column;
   align-items: center;
+
   /* ALWAYS SHOW Regardless of layout */
+
   /* Show the child elements */
   visibility: visible;
+
   /* Make sure child elements are fully visible */
   opacity: 1;
 }
@@ -48,9 +60,9 @@ nav span {
 /* Text for arrow */
 .title-side {
   font-size: 20px;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   font-weight: 300;
-  color: #FFFFFF;
+  color: $write-a-tweet-color;
 }
 
 /* 
@@ -74,22 +86,30 @@ nav span {
   height: 60px;
   /* Make the element round */
   border-radius: 50%;
+
   background-color: #007bff;
   color: #fff;
   border: none;
+
   /* Change cursor on hover for interactivity */
   cursor: pointer;
+
   text-align: center;
   font-size: 40px;
   font-weight: bold;
   line-height: 60px;
+
   text-shadow: 2px 2px 0px rgb(0, 110, 253);
+
   /* Position the button fixed to the viewport */
   position: fixed;
+
   /* Distance from the bottom of the viewport */
   bottom: 10px;
+
   /* Distance from the right of the viewport */
   right: 10px;
+
 }
 
 #scrollToTop:hover {

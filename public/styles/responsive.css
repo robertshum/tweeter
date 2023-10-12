@@ -1,120 +1,96 @@
-  /* for responsive layous */
+/* for responsive layous */
+.responsive-container {
+  display: grid;
+  gap: 10px;
+  /* makes sure elements are spaced evenly */
+  justify-content: space-around;
+}
+
+/* Mobile Devices (0-767px) */
+@media screen and (max-width: 767px) {
+  /* Body has ONE container */
   .responsive-container {
-    display: grid;
-    gap: 10px;
-
-
-    /* makes sure elements are spaced evenly */
-    justify-content: space-around;
+    grid-template-columns: 100%;
+    /* Horizontally center the container */
+    margin: 0 auto;
   }
-
-  /* Mobile Devices (0-767px) */
-  @media screen and (max-width: 767px) {
-
-    /* Body has ONE container */
-    .responsive-container {
-      grid-template-columns: 100%;
-
-      /* Horizontally center the container */
-      margin: 0 auto;
-    }
-
-    /* Select all elements after the first one */
-    .responsive-container> :first-child {
-
-      /* this doesnt seem to do anything at this media query */
-      height: 50%;
-    }
-
-    /* Select all elements after the first one */
-    .responsive-container> :not(:first-child) {
-      /* 100-90 / 2 = 5% on each side.  Quick maffs. */
-      margin: 0 5%;
-      width: 90%;
-    }
-
-    /* Hide navigation */
-    .navigation {
-      visibility: hidden;
-
-      /* Don't ask me why, ChatGPT suggested swapping between 0 and auto
-      and that doesn't break my design.  I have no clue why after 1h of research and experimenting */
-      top: auto;
-    }
-
-    .header-items {
-      visibility: hidden;
-    }
-
-    .header-items .avatar img {
-      height: 100px;
-      width: 100px;
-    }
-
-    /* adjust title and side text to another color */
-    .title {
-      color: brown;
-      background-color: aliceblue;
-      padding: 8px;
-    }
-
-    .title-side {
-      color: brown;
-      background-color: aliceblue;
-      padding: 8px;
-    }
+  /* Select all elements after the first one */
+  .responsive-container > :first-child {
+    /* this doesnt seem to do anything at this media query */
+    height: 50%;
   }
-
-  /* Tablets (768-1023px) */
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-
-    /* Body has ONE container */
-    .responsive-container {
-      grid-template-columns: 100%;
-      margin: 0 auto;
-    }
-
-    /* Select all elements after the first one */
-    .responsive-container> :not(:first-child) {
-      /* 100-90 / 2 = 5% on each side.  Quick maffs. */
-      margin: 0 5%;
-      width: 90%;
-    }
-
-    /* Hide navigation */
-    .navigation {
-      visibility: hidden;
-      top: auto;
-    }
-
-    .header-items {
-      width: 100%;
-      height: 375px;
-    }
+  /* Select all elements after the first one */
+  .responsive-container > :not(:first-child) {
+    /* 100-90 / 2 = 5% on each side.  Quick maffs. */
+    margin: 0 5%;
+    width: 90%;
   }
-
-  /* Desktops (1024px and above) */
-  @media screen and (min-width: 1024px) {
-
-    /* Body has TWO containers */
-    .responsive-container {
-      grid-template-columns: 30% 50%;
-
-      /* Add a top margin of 100px to offset the navigation */
-      /* height of the banner */
-      margin: 150px auto;
-    }
-
-    /* Hide navigation */
-    .navigation {
-      visibility: visible;
-      top: 0;
-    }
-
-    .header-items {
-
-      /* width no longer 100% for desktop */
-      width: 25rem;
-      height: 25rem;
-    }
+  /* Hide navigation */
+  .navigation {
+    visibility: hidden;
+    /* Don't ask me why, ChatGPT suggested swapping between 0 and auto
+    and that doesn't break my design.  I have no clue why after 1h of research and experimenting */
+    top: auto;
   }
+  .header-items {
+    visibility: hidden;
+  }
+  .header-items .avatar img {
+    height: 100px;
+    width: 100px;
+  }
+  /* adjust title and side text to another color */
+  .title {
+    color: brown;
+    background-color: aliceblue;
+    padding: 8px;
+  }
+  .title-side {
+    color: brown;
+    background-color: aliceblue;
+    padding: 8px;
+  }
+}
+/* Tablets (768-1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Body has ONE container */
+  .responsive-container {
+    grid-template-columns: 100%;
+    margin: 0 auto;
+  }
+  /* Select all elements after the first one */
+  .responsive-container > :not(:first-child) {
+    /* 100-90 / 2 = 5% on each side.  Quick maffs. */
+    margin: 0 5%;
+    width: 90%;
+  }
+  /* Hide navigation */
+  .navigation {
+    visibility: hidden;
+    top: auto;
+  }
+  .header-items {
+    width: 100%;
+    height: 375px;
+  }
+}
+/* Desktops (1024px and above) */
+@media screen and (min-width: 1024px) {
+  /* Body has TWO containers */
+  .responsive-container {
+    grid-template-columns: 30% 50%;
+    /* Add a top margin of 100px to offset the navigation */
+    /* height of the banner */
+    margin: 150px auto;
+  }
+  /* Hide navigation */
+  .navigation {
+    visibility: visible;
+    top: 0;
+  }
+  .header-items {
+    /* width no longer 100% for desktop */
+    width: 25rem;
+    height: 25rem;
+  }
+}
