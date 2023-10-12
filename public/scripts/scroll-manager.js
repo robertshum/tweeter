@@ -18,25 +18,35 @@ $(document).ready(function() {
   const $window = $(window);
   const $sideNavContainer = $(".title-side-container");
   const $toggle = $('#scrollToTop');
-
+  let readyToFade = true;
   $window.on("scroll", function() {
 
-    //Show the write new tweet container
-    $sideNavContainer.css("display", "flex").fadeIn("slow");
-
-    //Show the toggle to top button
-    $toggle.css("display", "inline-block").fadeIn("slow");
+    const boundary = 250;
 
     //we are at the top of the page
-    if ($window.scrollTop() === 0) {
+    if ($window.scrollTop() < boundary && readyToFade) {
 
+      readyToFade = false;
       //Hide the write new tweet container
       $sideNavContainer.css("display", "flex").fadeOut("slow");
+    }
 
+    if ($window.scrollTop() >= boundary) {
+
+      readyToFade = true;
+      //Show the write new tweet container
+      $sideNavContainer.css("display", "flex").fadeIn("slow");
+    }
+
+    if ($window.scrollTop() === 0) {
       //Hide the toggle to top button
       $toggle.css("display", "inline-block").fadeOut("slow");
       return;
     }
+
+    //Show the toggle to top button
+    $toggle.css("display", "inline-block").fadeIn("slow");
+    return;
   });
 
 });
