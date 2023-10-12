@@ -104,9 +104,8 @@ $(document).ready(function() {
     //ajax post request that doesn't refresh the page
     $.post("/tweets", formData)
       .done(function(response) {
-        // Handle a successful response
-        console.log("Success:", response);
 
+        // Handle a successful response
         //Load the new results
         loadTweets();
 
@@ -118,12 +117,13 @@ $(document).ready(function() {
         counter.val(140);
       })
       //TODO handle better
-      .fail(function(jqXHR, textStatus, errorThrown) {
+      .fail(function(jqXHR, _textStatus, _errorThrown) {
         // Handle the request failure
-        console.error("Request failed:", textStatus, errorThrown);
+        displayMsg("Request failed", $errorMsg);
+
         // You can access jqXHR.responseJSON for the error message if it's available
         if (jqXHR.responseJSON && jqXHR.responseJSON.error) {
-          console.error("Server Error:", jqXHR.responseJSON.error);
+          displayMsg("Server error", $errorMsg);
         }
       });
   });

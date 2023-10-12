@@ -11,10 +11,12 @@ $(document).ready(function() {
   //on Hover and mouse leave.  fa-shake class comes from
   //fontawesome.com
   $toggle.hover(function() {
+
     // On hover, add the 'fa-shake' class
     //instead of $toggle we could also use $(this).
     $toggle.addClass('fa-shake');
   }, function() {
+    
     // On mouseout, remove the 'fa-shake' class
     $toggle.removeClass('fa-shake');
   });

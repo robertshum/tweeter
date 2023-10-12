@@ -7,10 +7,12 @@ $(document).ready(function() {
   //on Hover and mouse leave.  fa-shake class comes from
   //fontawesome.com
   $toggle.hover(function() {
+
     // On hover, add the 'fa-shake' class
     //instead of $toggle we could also use $(this).
     $toggle.addClass('fa-shake');
   }, function() {
+
     // On mouseout, remove the 'fa-shake' class
     $toggle.removeClass('fa-shake');
   });
@@ -25,7 +27,7 @@ $(document).ready(function() {
       isToggleReady = false;
 
       // // Smooth scroll to the target element
-      var viewportHeight = $(window).height(); // Get the height of the viewport
+      var viewportHeight = $(window).height();
 
       //Scroll to the middle.  The reason why we subtract (viewport height / 2) is because we want to get to the 'middle' of the element.
       //if we scroll to the top of 'tweet-text', the navigation bar will cover it.

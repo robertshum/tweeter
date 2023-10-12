@@ -1,20 +1,25 @@
+/* Contains the avatar image and the profile name */
 .header-items {
+
   /* flex */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  /* bg texture */
+
+  /* bg related */
   background-image: url("../images/header-bg.png");
   background-repeat: repeat;
   background-color: #000000;
 }
 
+/* profile pic */
 .header-items .avatar {
   margin: 7x;
   max-height: 50%;
 }
 
+/* name */
 .header-items .name h2 {
   color: #ffffff;
   margin: 7px;

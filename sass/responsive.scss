@@ -28,6 +28,7 @@
 
     /* Select all elements after the first one */
     .responsive-container> :not(:first-child) {
+      
       /* 100-90 / 2 = 5% on each side.  Quick maffs. */
       margin: 0 5%;
       width: 90%;

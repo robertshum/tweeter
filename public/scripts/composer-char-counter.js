@@ -1,3 +1,5 @@
+const MAX_CHAR_COUNT = 140;
+
 $(document).ready(function() {
 
   //on input for the tweet input box
@@ -11,9 +13,7 @@ $(document).ready(function() {
     // Traverse to find the 'counter' element within the same parent container
     const $tweetCounter = $tweetText.siblings('.tweet-submission-container').children('.tweet-counter');
 
-    //TODO magic numberssss
-    //TODO stop ppl from submitting after < 0
-    const remaining = 140 - currCharLength;
+    const remaining = MAX_CHAR_COUNT - currCharLength;
     $tweetCounter.text(remaining);
 
     if (remaining < 0) {

@@ -1,7 +1,13 @@
+/* 
+  New Tweet Section
+*/
+
+// title of new tweet
 .new-tweet>h2 {
   margin: 15px 0;
 }
 
+// error msg css
 .new-tweet>errormsg {
   font-size: 25px;
   color: white;
@@ -11,6 +17,7 @@
   padding: 5px;
 }
 
+// form to hold new tweets
 .tweet-form {
   height: 200px;
 
@@ -22,8 +29,10 @@
 /* the input text box */
 .tweet-field {
   border: none;
+
   /* Remove the default border */
   border-bottom: 2px solid #000;
+
   /* Add a bottom border (2px solid line) */
   /* Optional: Add padding to adjust spacing 
   between text and border */
@@ -38,6 +47,9 @@
   resize: none;
 }
 
+/* 
+  Container that holds button and counter
+*/
 .tweet-submission-container {
   display: flex;
   flex-direction: row;
