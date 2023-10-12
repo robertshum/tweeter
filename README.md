@@ -20,13 +20,13 @@ Allows users to 'tweet' messages which gets saved in memory in a temp. db (data 
 
 Finished Stretch Goals:
 
-* Deployed and using parts of SCSS framework.
+* Deployed and using parts of SASS framework.
 * Toggle to top button gets the user back to the top of the page.
 * Compose a new tweet button moves to the tweet text field and focuses it.
 
 Unfinished Stretch Goals:
 
-* Make use of th SCSS framework some more (shared css, utilize more variables, etc).
+* Make use of the SASS framework some more (shared css, utilize more variables, etc).
 * Unit testing.
 
 
@@ -51,19 +51,19 @@ Unfinished Stretch Goals:
 
 ## Final Product
 
-* These images showcase some of the error handling and responsive layouts of Tweeter.
+These images showcase some of the error handling and responsive layouts of Tweeter.
 
-!["landing page"](https://github.com/robertshum/tinyapp/blob/main/docs/url-page.png)
+!["landing page"](https://github.com/robertshum/tweeter/blob/main/docs/desktop-landing-page-01.png)
 
-!["landing page show buttons"](https://github.com/robertshum/tinyapp/blob/main/docs/register-page.png)
+!["landing page show buttons"](https://github.com/robertshum/tweeter/blob/main/docs/desktop-landing-page-02.png)
 
-!["Error handling 1"](https://github.com/robertshum/tinyapp/blob/main/docs/edit-url-page.png)
+!["Error handling 1"](https://github.com/robertshum/tweeter/blob/main/docs/error-handling-01.png)
 
-!["Error handling 2"](https://github.com/robertshum/tinyapp/blob/main/docs/edit-url-page.png)
+!["Error handling 2"](https://github.com/robertshum/tweeter/blob/main/docs/error-handling-02.png)
 
-!["Smartphone view"](https://github.com/robertshum/tinyapp/blob/main/docs/edit-url-page.png)
+!["Smartphone view"](https://github.com/robertshum/tweeter/blob/main/docs/smartphone-view-01.png)
 
-!["Tablet view"](https://github.com/robertshum/tinyapp/blob/main/docs/edit-url-page.png)
+!["Tablet view"](https://github.com/robertshum/tweeter/blob/main/docs/tablet-view-01.png)
 
 
 ## Dependencies
