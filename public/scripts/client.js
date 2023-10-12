@@ -110,10 +110,12 @@ $(document).ready(function() {
         //Load the new results
         loadTweets();
 
-        //TODO move to helper method to clear the results
-        //probably reset the css, and the number to counter to 140.
-        const textField = $(event.target).find('#tweet-text');
+        //reset the css, and the number to counter to 140.
+        const textField = $(event.target).find("#tweet-text");
         textField.val("");
+
+        const counter = $(event.target).find(".tweet-counter");
+        counter.val(140);
       })
       //TODO handle better
       .fail(function(jqXHR, textStatus, errorThrown) {
