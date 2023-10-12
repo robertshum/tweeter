@@ -32,21 +32,41 @@ Unfinished Stretch Goals:
 
 ## Branches
 
-* Main - demo ready.
+```
+main
+```
+* demo ready.
 
-* feature/character-count - counts the amount of characters in the tweet box and gets reflected on the UI.
+```
+feature/character-count
+```
+* Counts the amount of characters in the tweet box and gets reflected on the UI.
 
-* feature/main-tweets - shows the tweets that have been posted.
+```
+feature/main-tweets
+```
+* Shows the tweets that have been posted.
 
-* feature/pretty-error-msg - displays a more pleasing error message for users over a alert box or a console log.
-
-* feature/responsive-ui - additional CSS and media queries to work on 3 types: smartphones, tablets, and desktops.
-
-* feature/stretch-form-toggle - clicking new tweet button moves to the tweet text field and focuses it.
-
-* feature/stretch-toggle-to-top - clicking circle toggle on bottom moves the user back up the page.
-
-* feature/tweet-form - the form that allows users to make tweets via. AJAX.
+```
+feature/pretty-error-msg
+```
+* Displays a more pleasing error message for users over a alert box or a console log.
+```
+feature/responsive-ui
+```
+* Conditional CSS and media queries to work on 3 layouts: smartphones, tablets, and desktops.
+```
+feature/stretch-form-toggle
+```
+* Clicking new tweet button moves to the tweet text field and focuses it.
+```
+feature/stretch-toggle-to-top
+```
+* Clicking circle toggle on bottom moves the user back up the page.
+```
+feature/tweet-form
+```
+* The form that allows users to make tweets via. AJAX.
 
 
 ## Final Product
