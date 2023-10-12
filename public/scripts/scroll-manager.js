@@ -21,7 +21,7 @@ $(document).ready(function() {
   let readyToFade = true;
   $window.on("scroll", function() {
 
-    const boundary = 250;
+    const boundary = TWEET_INPUT_TEXT_BOUNDARY;
 
     //we are at the top of the page
     if ($window.scrollTop() < boundary && readyToFade) {

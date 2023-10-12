@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
   /*
  * Client-side JS logic goes here
@@ -79,8 +78,9 @@ $(document).ready(function() {
     const $errorMsg = $(event.target).siblings("errormsg");
 
     let word = "before";
+
     //slide the error msg back up
-    $($errorMsg).slideUp(400, function() {
+    $($errorMsg).slideUp(TIME_TO_HIDE_ERR, function() {
       // Animation complete.
     });
 
@@ -95,8 +95,7 @@ $(document).ready(function() {
     }
 
     //if it's over 140 characters, give them a stern but friendly warning.
-    //TODO more magic numbers.
-    if (value.length > 140) {
+    if (value.length > MAX_CHAR_COUNT) {
       displayMsg("📏 The tweet is too long.", $errorMsg);
       return;
     }
@@ -114,7 +113,7 @@ $(document).ready(function() {
         textField.val("");
 
         const counter = $(event.target).find(".tweet-counter");
-        counter.val(140);
+        counter.val(MAX_CHAR_COUNT);
       })
       //TODO handle better
       .fail(function(jqXHR, _textStatus, _errorThrown) {
@@ -143,7 +142,7 @@ $(document).ready(function() {
   //display our super cool rad error message.
   const displayMsg = function(msg, $errorMsg) {
     $errorMsg.text(msg);
-    $errorMsg.slideDown(400, function() {
+    $errorMsg.slideDown(TIME_TO_HIDE_ERR, function() {
       // Animation complete.
     });
   };
