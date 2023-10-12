@@ -34,7 +34,7 @@ nav span {
 
 /* Right hand side navigtation container */
 .title-side-container {
-  display: flex;
+  display: none;
   margin: 0 1.5em;
   flex-direction: column;
   align-items: center;
@@ -68,8 +68,7 @@ nav span {
   Go to Top Round Arrow
 */
 #scrollToTop {
-  /* display: none; */
-  display: inline-block;
+  display: none;
   width: 60px;
   height: 60px;
   /* Make the element round */
@@ -94,5 +93,4 @@ nav span {
 
 #scrollToTop:hover {
   background-color: #ffdd00;
-  /* Background color for the button */
 }
