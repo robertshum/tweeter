@@ -26,12 +26,14 @@ $(document).ready(function() {
 
       isToggleReady = false;
 
-      // // Smooth scroll to the target element
-      var viewportHeight = $(window).height();
+      //var viewportHeight = $(window).height();
 
       //Scroll to the middle.  The reason why we subtract (viewport height / 2) is because we want to get to the 'middle' of the element.
       //if we scroll to the top of 'tweet-text', the navigation bar will cover it.
-      var targetPosition = $('#tweet-text').offset().top - viewportHeight / 2;
+      // var targetPosition = $('#tweet-text').offset().top - viewportHeight / 2;
+
+      //edit - using .top instead of using viewport height based on different layouts
+      var targetPosition = 0;
 
       //smooth scroll to target
       $('html, body').animate({

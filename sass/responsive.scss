@@ -28,7 +28,7 @@
 
     /* Select all elements after the first one */
     .responsive-container> :not(:first-child) {
-      
+
       /* 100-90 / 2 = 5% on each side.  Quick maffs. */
       margin: 0 5%;
       width: 90%;
@@ -73,6 +73,9 @@
     .responsive-container {
       grid-template-columns: 100%;
       margin: 0 auto;
+
+      // height of the header and bg
+      margin-top: 375px
     }
 
     /* Select all elements after the first one */
@@ -85,13 +88,20 @@
     /* Hide navigation */
     .navigation {
       visibility: hidden;
-      top: auto;
+      top: 0;
+      z-index: 1;
     }
 
     .header-items {
       width: 100%;
       height: 375px;
+
+      top: 0;
+      position: fixed;
+      z-index: 0;
+      margin-top: auto;
     }
+
   }
 
   /* Desktops (1024px and above) */
